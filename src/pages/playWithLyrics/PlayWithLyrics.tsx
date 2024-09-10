@@ -6,14 +6,12 @@ const PlayWithLyricsView = () => {
     const {handleNavigateToPlay} = usePage();
 
     return (
-        <>
-            <section
-                className="bg-primaryColor-primaryOne h-screen w-screen flex items-center justify-center">
-                <PlayWithLyricsViewMobile
-                    handleNavigateToPlay={handleNavigateToPlay}
-                />
-            </section>
-        </>
+        <section
+            className="bg-primaryColor-primaryOne h-screen w-screen flex items-center justify-center">
+            <PlayWithLyricsViewMobile
+                handleNavigateToPlay={handleNavigateToPlay}
+            />
+        </section>
     )
 }
 
