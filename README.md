@@ -1,51 +1,55 @@
-# React + TypeScript + Vite
+# Media Player Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a media player frontend built using React, TypeScript, and Vite. It follows the Hexagonal Architecture
+principles and is developed using Test-Driven Development (TDD) practices. The application is designed to provide a
+seamless and responsive user experience for playing various media files.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Media Player Frontend is a modern web application that allows users to play and manage their media files
+efficiently. The project leverages the power of React for building the user interface, TypeScript for type safety and
+improved developer experience, and Vite for fast and optimized development and build processes.
 
-## Expanding the ESLint configuration
+### Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Media Playback**: Supports playback of various media formats.
+- **Responsive Design**: Ensures a consistent user experience across different devices and screen sizes.
+- **User-Friendly Interface**: Intuitive controls for play, pause, seek, and volume adjustment.
+- **Playlist Management**: Allows users to create and manage playlists.
+- **Hexagonal Architecture**: Promotes a clear separation of concerns, making the application modular and testable.
+- **Test-Driven Development (TDD)**: Ensures robust and reliable code by writing tests before implementation.
 
-- Configure the top-level `parserOptions` property like this:
+## Deployed App
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+You can access the deployed version of the app [here](https://media-player-frontend-dusky.vercel.app/).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Project Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This template provides a minimal setup to get React working in Vite with Hot Module Replacement (HMR) and some ESLint
+rules.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-https://media-player-frontend-dusky.vercel.app/
+### Prerequisites
+
+- Node.js v20
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/DNP-LR/media-player-frontend.git
+    cd media-player-frontend
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm run dev

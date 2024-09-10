@@ -1,22 +1,23 @@
-### Building and running your application
+# Docker Setup for Media Player Frontend
 
-When you're ready, start your application by running:
-`docker compose up --build`.
+This document provides instructions on how to build and run the Media Player Frontend application using Docker.
 
-Your application will be available at http://localhost:5174.
+## Dockerfile Summary
 
-### Deploying your application to the cloud
+The Dockerfile is designed to build and serve the Media Player Frontend application using a multi-stage build process.
+It uses the `node:18-alpine` image to build the application and the `nginx:alpine` image to serve it.
 
-First, build your image, e.g.: `docker build -t myapp .`.
-If your cloud uses a different CPU architecture than your development
-machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
-you'll want to build the image for that platform, e.g.:
-`docker build --platform=linux/amd64 -t myapp .`.
+## Building the Docker Image
 
-Then, push it to your registry, e.g. `docker push myregistry.com/myapp`.
+To build the Docker image, run the following command in the root directory of the project:
 
-Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
-docs for more detail on building and pushing.
+```bash
+docker build -t media-player-frontend .
+```
 
-### References
-* [Docker's Node.js guide](https://docs.docker.com/language/nodejs/)
+## Running the Docker Image
+
+To run the Docker image, run the following command in the root directory of the project:
+
+```bash
+docker build -t media-player-frontend .
