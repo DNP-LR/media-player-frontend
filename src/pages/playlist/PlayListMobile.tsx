@@ -20,11 +20,12 @@ const songs: Song[] = [
     {title: "Loser", artist: "Bigbang"},
     {title: "Five Hundred Miles", artist: "Unknown Artist"},
 ];
+
 interface PlayListMobileProps {
     handleNavigateToPlay: () => void;
 }
 
-const MusicPlayer = ({handleNavigateToPlay}:PlayListMobileProps) => {
+const MusicPlayer = ({handleNavigateToPlay}: PlayListMobileProps) => {
     const [currentSong, setCurrentSong] = useState<number>(2);
     return (
         <div
@@ -33,7 +34,7 @@ const MusicPlayer = ({handleNavigateToPlay}:PlayListMobileProps) => {
                 <div className="flex justify-center items-center">
                     <div>
                         <img
-                            src="/src/assets/Album.png"
+                            src="Album.png"
                             alt="Album Cover"
                             className="object-cover w-full h-full"
                         />
@@ -53,6 +54,7 @@ const MusicPlayer = ({handleNavigateToPlay}:PlayListMobileProps) => {
                 {songs.map((song, index) => {
                     return (
                         <div
+                            key={'song' + index}
                             className={twMerge(
                                 currentSong === index ? "bg-primaryColor-primaryTwo bg-opacity-2" : "",
                                 "flex hover:bg-primaryColor-primaryTwo hover:bg-opacity-2 justify-between items-center p-3 rounded-lg cursor-pointer"
