@@ -1,7 +1,5 @@
-import env from ".env";
-
 export abstract class HttpProvider {
-    private baseUrl: string = env.MEDIA_PLAYER_ENDPOINT;
+    private baseUrl: string = import.meta.env.MEDIA_PLAYER_ENDPOINT;
 
     public async get(url: string): Promise<Response> {
 
