@@ -2,6 +2,7 @@ import {AnyAction, configureStore, ThunkDispatch} from "@reduxjs/toolkit";
 import {FLUSH, PAUSE, PERSIST, persistReducer, PURGE, REGISTER, REHYDRATE} from "redux-persist";
 import {rootReducer} from "./rootReducer";
 import storage from "redux-persist/lib/storage";
+import {MediaPlayerApiGateway} from "../lib/mediaPlayer/gateway/MediaPlayerApiGateway";
 
 const persistConfig = {
     key: "root",
@@ -11,7 +12,7 @@ const persistConfig = {
 export const createPersistedReducer = persistReducer(persistConfig, rootReducer);
 
 export interface Dependency {
-    mediaPlayerApiGateway: ''
+    mediaPlayerApiGateway: MediaPlayerApiGateway
 }
 
 interface StoreProps {
@@ -26,7 +27,7 @@ export const createStore = (
         extraArgument,
     }: StoreProps) => {
     return configureStore({
-        reducer: {},
+        reducer: createPersistedReducer,
         preloadedState,
         devTools: true,
         middleware: (getDefaultMiddleware) => getDefaultMiddleware({
