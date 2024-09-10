@@ -33,7 +33,7 @@ const MusicPlayer = ({handleNavigateToPlay}:PlayListMobileProps) => {
                 <div className="flex justify-center items-center">
                     <div>
                         <img
-                            src="/public/Album.png"
+                            src="/src/assets/Album.png"
                             alt="Album Cover"
                             className="object-cover w-full h-full"
                         />
