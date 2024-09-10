@@ -6,12 +6,12 @@ import {AppStore, createStore} from "./app/store";
 import {persistStore} from "redux-persist";
 import {Provider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
+import MediaPlayerApiGatewayHttp from "./lib/mediaPlayer/infrastructure/gateway/MediaPlayerApiGatewayHttp";
 
 
 export const store: AppStore = createStore({
     extraArgument: {
-        mediaPlayerApiGateway: () => {
-        }
+        mediaPlayerApiGateway: new MediaPlayerApiGatewayHttp()
     }
 });
 export const persist = persistStore(store);
