@@ -40,7 +40,7 @@ const PlayMobile =
 
                 <div className="flex items-center justify-center  shadow-amber-500 ">
                     <img className="h-full max-h-[60%] max-w-[60%] w-full rounded-full"
-                         src="/public/Union.png"
+                         src="/src/assets/Union.png"
                          alt="Union"/>
                 </div>
                 <div
