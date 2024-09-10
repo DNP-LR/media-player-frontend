@@ -1,0 +1,4 @@
+export enum ErrorStateTypes{
+    SERVER_ERROR = 'SERVER_ERROR',
+    VALIDATION_ERROR='VALIDATION_ERROR'
+}
