@@ -48,3 +48,4 @@ export default tseslint.config({
   },
 })
 ```
+https://media-player-frontend-dusky.vercel.app/
