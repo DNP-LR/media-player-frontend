@@ -17,7 +17,6 @@ export const usePage = (): PageBehavior => {
         navigate(AppRoutes.LYRICS)
     }
     const handleNavigateToPlayList = () => {
-        console.log('testing')
         navigate(AppRoutes.PLAYLIST);
     }
     return {
