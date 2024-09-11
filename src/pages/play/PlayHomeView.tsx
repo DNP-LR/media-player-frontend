@@ -5,12 +5,11 @@ import ProgressBar from "../../ui/shared/components/ProgressBar";
 import IconDoubleLeft from "../../ui/shared/icons/IconDoubleLeft";
 import IconPlay from "../../ui/shared/icons/IconPlay";
 import IconDoubleRight from "../../ui/shared/icons/IconDoubleRight";
-import IconElipsVertical from "../../ui/shared/icons/IconElipsVertical";
+import IconEclipseVertical from "../../ui/shared/icons/IconEclipseVertical";
 import {usePage} from "../usePage";
 
 const PlayHomeView = () => {
     const {handleNavigateToPlay, handleNavigateToPlayList} = usePage();
-
     return (
         <WrapperPage>
             <section
@@ -25,7 +24,7 @@ const PlayHomeView = () => {
                         <span>Sub title</span>
                     </div>
                     <button className="p-4 rounded-full bg-primaryColor-primaryTwo shadow-2xl hover:bg-gray-900">
-                        <IconElipsVertical/>
+                        <IconEclipseVertical/>
                     </button>
                 </div>
                 <div className="flex-grow h-full flex items-center justify-center">
