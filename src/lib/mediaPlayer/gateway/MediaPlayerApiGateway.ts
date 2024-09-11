@@ -1,5 +1,5 @@
-import {GetMediaPlayerResponse} from "../usecases/GetMediaPlayer/GetMediaPlayerResponse";
+import {GetAllMediaPlayerResponse} from "../usecases/GetMediaPlayer/GetAllMediaPlayerResponse";
 
 export interface MediaPlayerApiGateway {
-    getMediaPlayerList: () => Promise<GetMediaPlayerResponse>;
+    getMediaPlayerList: () => Promise<GetAllMediaPlayerResponse[]>;
 }
