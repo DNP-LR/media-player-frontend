@@ -21,3 +21,6 @@ To run the Docker image, run the following command in the root directory of the 
 
 ```bash
 docker build -t media-player-frontend .
+```
+
+docker build -t pavel27/mediaplayerfrontend .

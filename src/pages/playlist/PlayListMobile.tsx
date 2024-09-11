@@ -29,7 +29,7 @@ const MusicPlayer = ({handleNavigateToPlay}: PlayListMobileProps) => {
     const [currentSong, setCurrentSong] = useState<number>(2);
     return (
         <div
-            className="w-full h-full lg:rounded lg:shadow-2xl lg:border-1 lg:border-primaryColor-primaryTwo  bg-primaryColor-primaryOne lg:max-w-[25%] lg:max-h-[90%]">
+            className="h-full lg:rounded-2xl lg:shadow-2xl bg-primaryColor-primaryOne w-full lg:max-w-[25%] lg:max-h-[90%] flex flex-col justify-between">
             <div className="h-full max-h-[25%] relative">
                 <div className="flex justify-center items-center">
                     <div>
@@ -42,10 +42,10 @@ const MusicPlayer = ({handleNavigateToPlay}: PlayListMobileProps) => {
                 </div>
             </div>
             <div className="flex p-2 pl-8 pr-8 items-center justify-between">
-                <button className="p-4 rounded-full bg-primaryColor-primaryOne shadow-2xl hover:bg-gray-600">
+                <button className="p-4 rounded-full bg-primaryColor-primaryTwo shadow-2xl hover:bg-gray-900 ">
                     <IconDownload/>
                 </button>
-                <button className="p-4 rounded-full bg-primaryColor-primaryOne shadow-2xl hover:bg-gray-600">
+                <button className="p-4 rounded-full bg-primaryColor-primaryTwo shadow-2xl hover:bg-gray-900 ">
                     <IconLike className="bg-secondaryColor-secondaryTwo"/>
                 </button>
             </div>
@@ -55,6 +55,7 @@ const MusicPlayer = ({handleNavigateToPlay}: PlayListMobileProps) => {
                     return (
                         <div
                             key={'song' + index}
+                            onClick={() => setCurrentSong(index)}
                             className={twMerge(
                                 currentSong === index ? "bg-primaryColor-primaryTwo bg-opacity-2" : "",
                                 "flex hover:bg-primaryColor-primaryTwo hover:bg-opacity-2 justify-between items-center p-3 rounded-lg cursor-pointer"
@@ -65,7 +66,8 @@ const MusicPlayer = ({handleNavigateToPlay}: PlayListMobileProps) => {
                                     <p className="text-sm font-primary text-gray-400">{song.artist}</p>
                                 </div>
                             </div>
-                            <div className="flex justify-end p-2 rounded-full bg-orange-500">
+                            <div onClick={handleNavigateToPlay}
+                                 className="flex justify-end p-2 rounded-full bg-orange-500">
                                 {currentSong === index ? <IconPause/> : <IconPlay/>}
                             </div>
                         </div>
