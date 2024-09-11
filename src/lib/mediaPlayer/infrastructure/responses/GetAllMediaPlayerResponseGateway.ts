@@ -1,4 +1,4 @@
-export interface GetMediaPlayerResponseGateway {
+export interface GetAllMediaPlayerResponseGateway {
     id: number;
     title: string;
     artist: string;
