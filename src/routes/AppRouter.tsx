@@ -2,11 +2,11 @@ import {createBrowserRouter} from "react-router-dom";
 import AppLayout from "../ui/layout/AppLayout";
 import {AppRoutes} from "./AppRoutes";
 import HomeView from "../pages/home/HomeView";
-import PlayList from "../pages/playlist/PlayList";
 import React from "react";
-import PlayView from "../pages/play/PlayView";
+import PlayHomeView from "../pages/play/PlayHomeView";
+import PlayMusic from "../pages/play/PlayMusic";
 import PlayWithLyricsView from "../pages/playWithLyrics/PlayWithLyrics";
-
+import PlayList from "../pages/playlist/PlayList";
 
 export const router = createBrowserRouter([
     {
@@ -14,6 +14,9 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                element: <HomeView/>
+            },
+            {
                 path: AppRoutes.HOME,
                 element: <HomeView/>
             },
@@ -23,11 +26,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: AppRoutes.PLAY,
-                element: <PlayView/>
-            },
-            {
-                path: AppRoutes.LYRICS,
-                element: <PlayWithLyricsView/>
+                element: <PlayHomeView/>,
+                children: [
+                    {
+                        index: true,
+                        element: <PlayMusic/>
+                    },
+                    {
+                        path: AppRoutes.LYRICS,
+                        element: <PlayWithLyricsView/>
+                    }
+                ]
             },
             {
                 path: '*',
@@ -35,4 +44,4 @@ export const router = createBrowserRouter([
             }
         ]
     }
-])
+]);
