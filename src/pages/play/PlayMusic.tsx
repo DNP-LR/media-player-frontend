@@ -1,7 +1,7 @@
 import {usePage} from "../usePage";
 
 const PlayMusic = () => {
-    const {handleNavigateToPlayWithLyrics} = usePage()
+    const {handleNavigateToPlayWithLyrics} = usePage();
     return (
         <section className="">
             <div className="flex items-center justify-center  shadow-amber-500 ">

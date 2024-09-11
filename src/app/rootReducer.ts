@@ -1,6 +1,6 @@
 import {combineReducers} from "@reduxjs/toolkit";
-import mediaPlayerSlice from "../lib/mediaPlayer/slices/MediaPlayerSlice";
+import mediaPlayerReducer from "../lib/mediaPlayer/slices/MediaPlayerSlice";
 
 export const rootReducer = combineReducers({
-    mediaPlayerReducer: mediaPlayerSlice,
+    mediaPlayerReducer: mediaPlayerReducer,
 })
