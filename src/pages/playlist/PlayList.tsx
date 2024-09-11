@@ -1,15 +1,15 @@
-import MusicPlayer from "./PlayListMobile";
 import {usePage} from "../usePage";
+import WrapperPage from "../../ui/layout/WrapperPage";
+import MusicPlayer from "./PlayListMobile";
 
 const PlayList = () => {
     const {handleNavigateToPlay} = usePage();
     return (
-        <section
-            className="bg-primaryColor-primaryOne h-screen w-screen flex items-center justify-center">
+        <WrapperPage>
             <MusicPlayer
                 handleNavigateToPlay={handleNavigateToPlay}
             />
-        </section>
+        </WrapperPage>
     )
 }
-export default PlayList
+export default PlayList;
