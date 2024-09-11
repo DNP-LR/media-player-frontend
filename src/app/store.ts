@@ -18,7 +18,6 @@ export interface Dependency {
 interface StoreProps {
     extraArgument: Dependency;
     preloadedState?: RootState
-
 }
 
 export const createStore = (
