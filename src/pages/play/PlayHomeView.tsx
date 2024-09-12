@@ -9,7 +9,7 @@ import IconEclipseVertical from "../../ui/shared/icons/IconEclipseVertical";
 import {usePage} from "../usePage";
 
 const PlayHomeView = () => {
-    const {handleNavigateToPlay, handleNavigateToPlayList} = usePage();
+    const {handleNavigateToPlay, handleNavigateToPlayList, currenMusic} = usePage();
     return (
         <WrapperPage>
             <section
@@ -20,8 +20,8 @@ const PlayHomeView = () => {
                         <IconDoubleLeft/>
                     </button>
                     <div className="flex flex-col font-primary items-center justify-center">
-                        <h1>First Header</h1>
-                        <span>Sub title</span>
+                        <h1>{currenMusic.title}</h1>
+                        <span>{currenMusic.album}</span>
                     </div>
                     <button className="p-4 rounded-full bg-primaryColor-primaryTwo shadow-2xl hover:bg-gray-900">
                         <IconEclipseVertical/>

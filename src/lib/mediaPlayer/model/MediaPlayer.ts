@@ -8,6 +8,6 @@ export interface MediaPlayer {
     trackNumber: number;
     trackCount: number;
     year: number;
-    comment: string;
+    lyrics: string;
     coverPath: string
 }
