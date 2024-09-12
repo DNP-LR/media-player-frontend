@@ -1,7 +1,8 @@
 import {usePage} from "../usePage";
 
 const PlayMusic = () => {
-    const {handleNavigateToPlayWithLyrics} = usePage();
+    const {handleNavigateToPlayWithLyrics, currenMusic} = usePage();
+    console.log(currenMusic)
     return (
         <section className="">
             <div className="flex items-center justify-center  shadow-amber-500 ">
@@ -12,9 +13,9 @@ const PlayMusic = () => {
             <div
                 className="flex flex-col cursor-pointer items-center justify-center h-full max-h-[80%] text-sm text-center"
                 onClick={handleNavigateToPlayWithLyrics}>
-                <span className="">The Monster The Monster</span>
+                <span className="">{currenMusic.title}</span>
                 <span
-                    className="font-primary text-secondaryColor-secondaryOne ">The Monster The Monster The Monster</span>
+                    className="font-primary text-secondaryColor-secondaryOne ">{currenMusic.album}</span>
                 <span>The Monster The Monster The Monster</span>
                 <span>The Monster The Monster The Monster</span>
                 <span>The Monster The Monster The Monster</span>
