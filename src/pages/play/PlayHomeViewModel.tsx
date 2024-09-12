@@ -18,21 +18,12 @@ export const PlayHomeViewModel = (state: RootState): PlayHomeViewModelProps => {
     const loading = MediaPlayerSliceSelector.loading(state);
     const deleteLoading = MediaPlayerSliceSelector.deleteLoading(state);
 
-
     const displayMediaPlayer = () => {
         switch (loading) {
             case LoadingState.PENDING:
                 return <div>Loading</div>
             case LoadingState.SUCCESS:
-                return <div>
-                    {mediaPlayer.map((mediaPlayer) => {
-                        return (
-                            <div key={mediaPlayer.id}>
-                                {mediaPlayer.title}
-                            </div>
-                        )
-                    })}
-                </div>
+                return <div></div>
             case LoadingState.FAIL:
                 return <div>Fail</div>
             case LoadingState.IDLE:
