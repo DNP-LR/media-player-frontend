@@ -1,6 +1,5 @@
 import {useNavigate} from "react-router-dom";
 import {AppRoutes} from "../../routes/AppRoutes";
-// React
 import {motion} from "framer-motion"
 
 
