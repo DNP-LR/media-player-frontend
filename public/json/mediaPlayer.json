@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "album": "A Night at the Opera",
+    "genre": "Rock",
+    "duration": 355,
+    "mp3Data": "media/StockTuneStarryNightLullaby_1726081192.mp3",
+    "trackCount": 0,
+    "year": 1975,
+    "lyrics": "A classic rock anthem",
+    "coverPath": "media/Union.png"
+  }
+]

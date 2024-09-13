@@ -5,7 +5,7 @@ export interface MediaPlayer {
     album: string;
     genre: string;
     duration: number;
-    trackNumber: number;
+    mp3Data: string;
     trackCount: number;
     year: number;
     lyrics: string;
