@@ -19,7 +19,6 @@ export const usePage = (): PageBehavior => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const mediaPlayerViewModel = useAppSelector((state) => PlayHomeViewModel(state));
-
     const [currenMusic, setCurrenMusic] = useState<MediaPlayer>(mediaPlayerViewModel.mediaPlayerList[0]);
 
     const handleNavigateToPlay = () => {
@@ -35,9 +34,9 @@ export const usePage = (): PageBehavior => {
         dispatch(GetAllMediaPlayerAsync())
     }
 
+
     useEffect(() => {
         handleGeAllMediaPlayer();
-        console.log('data', mediaPlayerViewModel.mediaPlayerList)
     }, []);
 
     return {

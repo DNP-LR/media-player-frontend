@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import WrapperPage from "../../ui/layout/WrapperPage";
 import {Outlet} from "react-router-dom";
 import IconDoubleLeft from "../../ui/shared/icons/IconDoubleLeft";
@@ -7,21 +7,21 @@ import IconDoubleRight from "../../ui/shared/icons/IconDoubleRight";
 import IconEclipseVertical from "../../ui/shared/icons/IconEclipseVertical";
 import {usePage} from "../usePage";
 import IconPause from "../../ui/shared/icons/IconPause";
+import {usePlay} from "./usePlay";
 
 const PlayHomeView = () => {
-    const {handleNavigateToPlay, handleNavigateToPlayList, currenMusic} = usePage();
-    const audioPlayer = useRef(new Audio());
-    const [isPlaying, setIsPlaying] = useState(false);
+    const {
+        handleNavigateToPlay,
+        handleNavigateToPlayList,
+        currenMusic,
+    } = usePage();
+    const {
+        audioPlayer,
+        handlePlayPause,
+        isPlaying
+    } = usePlay();
 
-    const handlePlayPause = () => {
-        if (isPlaying) {
-            audioPlayer.current.pause();
-        } else {
-            audioPlayer?.current.play().then();
-        }
-        setIsPlaying(!isPlaying);
-    };
-
+    const contextValue = {isPlaying};
     return (
         <WrapperPage>
             <section
@@ -40,7 +40,7 @@ const PlayHomeView = () => {
                     </button>
                 </div>
                 <div className="flex-grow h-full flex items-center justify-center">
-                    <Outlet/>
+                    <Outlet context={contextValue}/>
                 </div>
                 <div className="flex items-center font-primary w-full text-white text-sm gap-4 justify-center p-4">
                     <audio ref={audioPlayer} controls>
@@ -67,6 +67,7 @@ const PlayHomeView = () => {
             </section>
         </WrapperPage>
     );
+
 };
 
 export default PlayHomeView;
