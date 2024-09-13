@@ -32,8 +32,8 @@ const PlayHomeView = () => {
                         <IconDoubleLeft/>
                     </button>
                     <div className="flex flex-col font-primary items-center justify-center">
-                        <h1>{currenMusic.title ?? ''}</h1>
-                        <span>{currenMusic.album ?? ''}</span>
+                        <h1>{currenMusic.title ?? 'Default value'}</h1>
+                        <span>{currenMusic.album ?? 'Default value'}</span>
                     </div>
                     <button className="p-4 rounded-full bg-primaryColor-primaryTwo shadow-2xl hover:bg-gray-900">
                         <IconEclipseVertical/>
@@ -44,7 +44,7 @@ const PlayHomeView = () => {
                 </div>
                 <div className="flex items-center font-primary w-full text-white text-sm gap-4 justify-center p-4">
                     <audio ref={audioPlayer} controls>
-                        <source src={currenMusic.mp3Data ?? ''} type="audio/mpeg"/>
+                        <source src={currenMusic.mp3Data ?? 'Default value'} type="audio/mpeg"/>
                     </audio>
                 </div>
                 <div className="flex p-2 pl-8 pr-8 items-center justify-between">

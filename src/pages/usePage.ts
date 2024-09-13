@@ -39,6 +39,7 @@ export const usePage = (): PageBehavior => {
         handleGeAllMediaPlayer();
         console.log('data', mediaPlayerViewModel.mediaPlayerList)
     }, []);
+
     return {
         handleNavigateToPlay,
         handleNavigateToPlayList,

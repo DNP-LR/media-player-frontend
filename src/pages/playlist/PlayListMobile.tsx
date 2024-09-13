@@ -22,7 +22,7 @@ const MusicPlayer = ({handleNavigateToPlay, mediaPlayerList}: PlayListMobileProp
                 <div className="flex justify-center items-center">
                     <div>
                         <img
-                            src={currenMusic.coverPath ?? ''}
+                            src={currenMusic.coverPath ?? 'Default value'}
                             alt="Album Cover"
                             className="object-cover w-full h-full"
                         />
@@ -50,8 +50,8 @@ const MusicPlayer = ({handleNavigateToPlay, mediaPlayerList}: PlayListMobileProp
                             )}>
                             <div className="flex items-center">
                                 <div className="flex flex-col justify-start">
-                                    <p className="text-lg font-primary">{song.title ?? ''}</p>
-                                    <p className="text-sm font-primary text-gray-400">{song.artist ?? ''}</p>
+                                    <p className="text-lg font-primary">{song.title ?? 'Default value'}</p>
+                                    <p className="text-sm font-primary text-gray-400">{song.artist ?? 'Default value'}</p>
                                 </div>
                             </div>
                             <div onClick={handleNavigateToPlay}
