@@ -5,7 +5,6 @@ const PlayMusic = () => {
     const {handleNavigateToPlayWithLyrics, currenMusic} = usePage();
 
     useLayoutEffect(() => {
-
     }, [currenMusic]);
     return (
         <section className="">
@@ -17,9 +16,9 @@ const PlayMusic = () => {
             <div
                 className="flex flex-col cursor-pointer items-center justify-center h-full max-h-[80%] text-sm text-center"
                 onClick={handleNavigateToPlayWithLyrics}>
-                <span className="">{currenMusic.title ?? 'Default value'}</span>
+                <span className="">{currenMusic?.title ?? 'Default value'}</span>
                 <span
-                    className="font-primary text-secondaryColor-secondaryOne ">{currenMusic.album ?? 'Default value'}</span>
+                    className="font-primary text-secondaryColor-secondaryOne ">{currenMusic?.album ?? 'Default value'}</span>
                 <span>The Monster The Monster The Monster</span>
                 <span>The Monster The Monster The Monster</span>
                 <span>The Monster The Monster The Monster</span>
