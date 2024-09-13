@@ -8,8 +8,10 @@ import PlayMusic from "../pages/play/PlayMusic";
 import PlayWithLyricsView from "../pages/playWithLyrics/PlayWithLyrics";
 import PlayList from "../pages/playlist/PlayList";
 
+
 export const router = createBrowserRouter([
     {
+
         element: <AppLayout/>,
         children: [
             {

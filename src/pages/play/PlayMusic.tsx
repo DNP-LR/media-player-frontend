@@ -1,11 +1,8 @@
 import {usePage} from "../usePage";
-import {useLayoutEffect} from "react";
 
 const PlayMusic = () => {
     const {handleNavigateToPlayWithLyrics, currenMusic} = usePage();
 
-    useLayoutEffect(() => {
-    }, [currenMusic]);
     return (
         <section className="">
             <div className="flex items-center justify-center  shadow-amber-500 ">
@@ -16,7 +13,7 @@ const PlayMusic = () => {
             <div
                 className="flex flex-col cursor-pointer items-center justify-center h-full max-h-[80%] text-sm text-center"
                 onClick={handleNavigateToPlayWithLyrics}>
-                <span >{currenMusic?.title ?? 'Default value'}</span>
+                <span>{currenMusic?.title ?? 'Default value'}</span>
                 <span
                     className="font-primary text-secondaryColor-secondaryOne ">{currenMusic?.album ?? 'Default value'}</span>
                 <span>The Monster The Monster The Monster</span>

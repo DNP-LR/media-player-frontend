@@ -23,7 +23,7 @@ export const PlayHomeViewModel = (state: RootState): PlayHomeViewModelProps => {
             case LoadingState.PENDING:
                 return <div>Loading</div>
             case LoadingState.SUCCESS:
-                return <div></div>
+                return <div>dfdfd</div>
             case LoadingState.FAIL:
                 return <div>Fail</div>
             case LoadingState.IDLE:
