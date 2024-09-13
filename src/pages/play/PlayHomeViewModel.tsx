@@ -32,7 +32,6 @@ export const PlayHomeViewModel = (state: RootState): PlayHomeViewModelProps => {
                 return ExhaustedMatchingGuard(loading)
         }
     }
-
     return {
         loading,
         deleteLoading: deleteLoading === LoadingState.PENDING,

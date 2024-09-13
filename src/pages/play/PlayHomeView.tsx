@@ -1,15 +1,27 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import WrapperPage from "../../ui/layout/WrapperPage";
 import {Outlet} from "react-router-dom";
-import ProgressBar from "../../ui/shared/components/ProgressBar";
 import IconDoubleLeft from "../../ui/shared/icons/IconDoubleLeft";
 import IconPlay from "../../ui/shared/icons/IconPlay";
 import IconDoubleRight from "../../ui/shared/icons/IconDoubleRight";
 import IconEclipseVertical from "../../ui/shared/icons/IconEclipseVertical";
 import {usePage} from "../usePage";
+import IconPause from "../../ui/shared/icons/IconPause";
 
 const PlayHomeView = () => {
     const {handleNavigateToPlay, handleNavigateToPlayList, currenMusic} = usePage();
+    const audioPlayer = useRef(new Audio());
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const handlePlayPause = () => {
+        if (isPlaying) {
+            audioPlayer.current.pause();
+        } else {
+            audioPlayer?.current.play().then();
+        }
+        setIsPlaying(!isPlaying);
+    };
+
     return (
         <WrapperPage>
             <section
@@ -30,20 +42,20 @@ const PlayHomeView = () => {
                 <div className="flex-grow h-full flex items-center justify-center">
                     <Outlet/>
                 </div>
-                <div className="p-4">
-                    <div className="flex items-center font-primary w-full text-white text-sm gap-4 justify-center p-4">
-                        <span className="opacity-45">00:59</span>
-                        <ProgressBar progress={59}/>
-                        <span className="opacity-45">03:54</span>
+                <div className="flex items-center font-primary w-full text-white text-sm gap-4 justify-center p-4">
+                    <div className="">
+                        <audio ref={audioPlayer} controls>
+                            <source src={currenMusic.mp3Data} type="audio/mpeg"/>
+                        </audio>
                     </div>
                 </div>
                 <div className="flex p-2 pl-8 pr-8 items-center justify-between">
                     <button className="p-4 rounded-full bg-primaryColor-primaryTwo shadow-2xl hover:bg-gray-900">
                         <IconDoubleLeft/>
                     </button>
-                    <button
-                        className="p-4 rounded-full bg-secondaryColor-secondaryOne shadow-2xl hover:bg-secondaryColor-secondaryTwo">
-                        <IconPlay/>
+                    <button onClick={handlePlayPause}
+                            className="p-4 rounded-full bg-secondaryColor-secondaryOne shadow-2xl hover:bg-secondaryColor-secondaryTwo">
+                        {isPlaying ? <IconPause/> : <IconPlay/>}
                     </button>
                     <button className="p-4 rounded-full bg-primaryColor-primaryTwo shadow-2xl hover:bg-gray-900 ">
                         <IconDoubleRight className="bg-secondaryColor-secondaryTwo"/>
