@@ -1,4 +1,4 @@
 export const MediaPlayerRoutes = {
-    ALL: 'mediaPlayer'
+    ALL: 'mediaPlayer.json'
 }
 
