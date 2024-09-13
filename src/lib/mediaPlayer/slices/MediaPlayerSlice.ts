@@ -18,7 +18,7 @@ const initialState: MediaPlayerState = mediaPlayerAdapter.getInitialState({
 });
 
 const mediaPlayerSlice = createSlice({
-    name: 'mediaPlayer-slice',
+    name: 'mediaPlayer',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
