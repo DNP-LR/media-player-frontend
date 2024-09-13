@@ -3,12 +3,12 @@ export interface GetAllMediaPlayerResponseGateway {
     title: string;
     artist: string;
     album: string;
-    genre: string,
-    duration: number,
-    trackNumber: number,
-    trackCount: number,
+    genre: string;
+    duration: number;
+    mp3Data: string;
+    trackCount: number;
     year: number;
-    comment: string;
-    coverPath: string;
+    lyrics: string;
+    coverPath: string
 }
 
