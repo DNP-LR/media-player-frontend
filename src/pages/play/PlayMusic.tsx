@@ -3,13 +3,15 @@ import React from "react";
 import {twMerge} from "tailwind-merge";
 import {useOutletContext} from "react-router-dom";
 import {motion} from "framer-motion"
+import {usePlay} from "./usePlay";
 
 interface PlayHomeContext {
     isPlaying: boolean;
 }
 
 const PlayMusic = () => {
-    const {handleNavigateToPlayWithLyrics, currenMusic} = usePage();
+    const {handleNavigateToPlayWithLyrics} = usePage();
+    const {currenMusic} = usePlay();
     const {isPlaying} = useOutletContext<PlayHomeContext>();
     return (
         <section className="">

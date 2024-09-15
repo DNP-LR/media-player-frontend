@@ -4,8 +4,8 @@ import MusicPlayer from "./PlayListMobile";
 import {usePlay} from "../play/usePlay";
 
 const PlayList = () => {
-    const {handleNavigateToPlay, mediaPlayerViewModel, currenMusic, setCurrenMusic} = usePage();
-    const {isPlaying, handlePlayPause,} = usePlay();
+    const {handleNavigateToPlay} = usePage();
+    const {isPlaying, handlePlayPause, mediaPlayerViewModel, currenMusic, setCurrenMusic} = usePlay();
     return (
         <WrapperPage>
             <MusicPlayer

@@ -1,9 +1,9 @@
 import React from "react";
-import {usePage} from "../usePage";
+import {usePlay} from "../play/usePlay";
 
 const PlayWithLyricsView = () => {
 
-    const {currenMusic} = usePage()
+    const {currenMusic} = usePlay()
     return (
         <div
             className="flex flex-col cursor-pointer items-center justify-center h-full max-h-[80%] text-sm text-center"

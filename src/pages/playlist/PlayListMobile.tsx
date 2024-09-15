@@ -19,8 +19,6 @@ interface PlayListMobileProps {
 const MusicPlayer =
     ({
          handleNavigateToPlay,
-         isPlaying,
-         handlePlayPause,
          currenMusic,
          setCurrenMusic,
          mediaPlayerList

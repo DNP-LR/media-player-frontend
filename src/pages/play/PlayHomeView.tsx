@@ -13,11 +13,11 @@ const PlayHomeView = () => {
     const {
         handleNavigateToPlay,
         handleNavigateToPlayList,
-        currenMusic,
     } = usePage();
     const {
         audioPlayer,
         handlePlayPause,
+        currenMusic,
         isPlaying
     } = usePlay();
 

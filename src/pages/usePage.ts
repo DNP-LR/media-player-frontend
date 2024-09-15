@@ -10,16 +10,13 @@ export interface PageBehavior {
     handleNavigateToPlay: () => void;
     handleNavigateToPlayWithLyrics: () => void;
     handleNavigateToPlayList: () => void;
-    mediaPlayerViewModel: PlayHomeViewModelProps;
-    currenMusic: MediaPlayer;
-    setCurrenMusic: (currenMusic: MediaPlayer) => void;
+
 }
 
 export const usePage = (): PageBehavior => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
-    const mediaPlayerViewModel = useAppSelector((state) => PlayHomeViewModel(state));
-    const [currenMusic, setCurrenMusic] = useState<MediaPlayer>(mediaPlayerViewModel.mediaPlayerList[0]);
+
 
     const handleNavigateToPlay = () => {
         navigate(AppRoutes.PLAY)
@@ -43,8 +40,6 @@ export const usePage = (): PageBehavior => {
         handleNavigateToPlay,
         handleNavigateToPlayList,
         handleNavigateToPlayWithLyrics,
-        mediaPlayerViewModel,
-        currenMusic,
-        setCurrenMusic,
+
     }
 }
